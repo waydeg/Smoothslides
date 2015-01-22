@@ -30,7 +30,7 @@ A responsive jQuery slideshow with beautiful panning effects on each image. Crea
     </div>
 </div>
 ```
-<i>Note- to add a caption, put a title on that slide's div.</i>
+<i>Note- to add a caption, put a title on that slide's div. To disable the effects for a slide add the class "no-effect" to the slide.</i>
 
 ##Options
 <table class="rwd-table">
