@@ -294,6 +294,8 @@
             // Start First Animation 
             if (options.autoPlay == 'false') {
                 //do nothing
+            } else if($('.ss-slide:eq(-2)').hasClass('no-effect')){
+        		crossFade();		
             } else if (options.effect == 'random') {
                 var fns = [zoomOut, zoomIn, panRight, panLeft];
                 fns[Math.floor(Math.random() * fns.length)]();
@@ -305,7 +307,11 @@
 
             /* Subsequent Auto Animations */
             var fn = function() {
-                if (options.effect == 'random' && options.autoPlay == 'true') {
+            	if($('.ss-slide:eq(-2)').hasClass('no-effect')){
+            		crossFade();	
+            	}
+            	else 
+            		if (options.effect == 'random' && options.autoPlay == 'true') {
                     var fns = [zoomOut, zoomIn, panRight, panLeft, panUp, panDown];
                     fns[Math.floor(Math.random() * fns.length)]();
                 } else if (options.effect == 'false') {
